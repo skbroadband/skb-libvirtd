@@ -1,0 +1,14 @@
+module Test_virtlockd =
+  let conf = "log_level = 3
+log_filters=\"1:locking 4:object 4:json 4:event 1:util\"
+log_outputs=\"3:syslog:virtlockd\"
+max_clients = 1024
+admin_max_clients = 5
+"
+
+   test Virtlockd.lns get conf =
+        { "log_level" = "3" }
+        { "log_filters" = "1:locking 4:object 4:json 4:event 1:util" }
+        { "log_outputs" = "3:syslog:virtlockd" }
+        { "max_clients" = "1024" }
+        { "admin_max_clients" = "5" }

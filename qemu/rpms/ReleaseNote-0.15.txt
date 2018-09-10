@@ -1,0 +1,51 @@
+
+r0.15
+=====
+
+* 사용자 토큰 처리 변경
+  - 설정된 토큰값이 NULL 인 경우 사용자 접속을 허용하지 않도록 수정
+* Gstreamer Plugin Path 를 Install Path 로 강제 고정
+* Enable Seccomp in QEMU
+* Enable RBD in QEMU
+* H.264 스트리밍 중 죽는 문제 수정
+
+
+r0.14
+=====
+
+* 사용자 토큰 인증 처리 기능 활성화
+
+
+r0.13
+=====
+
+* USB Redir 장치 연결 모니터링 QMP 구현
+* 사용자 토큰 인증 구현
+* H.264 Max Bitrate 설정 구현
+* Guest OS 리소스 모니터링 QMP 구현
+* 사용자 접속 상태 모니터링 QMP 구현
+* 게스트 리눅스 동적해상도 이슈 수정
+
+
+r0.12
+=====
+
+* 동적 해상도 변경 방식을 다시 client monirot config 로 변경
+  - Guest Linux 에서 멀티 모니터 동작에 문제가 있어 Rollback
+  - Guest Linux 에 기존 동적 해상도 변경 문제 재 검토 필요
+* Guest OS 의 실행중인 프로그램 리스트 전달 QMP 구현
+* 사용자 토큰 설정 구현
+
+
+r0.11
+=====
+
+- h.264 스트리밍 성능 개선
+- 동적 해상도 변경시 항상 agent monitor config 를 사용하도록 변경 
+
+
+r0.10
+=====
+
+- first release.
+

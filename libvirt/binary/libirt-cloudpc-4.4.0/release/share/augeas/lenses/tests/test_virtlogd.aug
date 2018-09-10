@@ -1,0 +1,18 @@
+module Test_virtlogd =
+  let conf = "log_level = 3
+log_filters=\"1:logging 4:object 4:json 4:event 1:util\"
+log_outputs=\"3:syslog:virtlogd\"
+max_clients = 1024
+admin_max_clients = 5
+max_size = 2097152
+max_backups = 3
+"
+
+   test Virtlogd.lns get conf =
+        { "log_level" = "3" }
+        { "log_filters" = "1:logging 4:object 4:json 4:event 1:util" }
+        { "log_outputs" = "3:syslog:virtlogd" }
+        { "max_clients" = "1024" }
+        { "admin_max_clients" = "5" }
+        { "max_size" = "2097152" }
+        { "max_backups" = "3" }
