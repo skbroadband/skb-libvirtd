@@ -1,6 +1,6 @@
 FROM kolla/centos-source-nova-libvirt:pike
 RUN  mkdir -p /etc/libvirt/hooks
-COPY libvirt-hooks/qemu /etc/libvirt/hooks/qemu
+COPY libvirt-hooks/qemu-latest /etc/libvirt/hooks/qemu
 COPY rpms-latest/ /opt/rpms/
 RUN yum install -y /opt/rpms/*.rpm
 COPY pem/gloovir-sample-pem/ /etc/pki/libvirt-spice/
